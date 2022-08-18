@@ -1,3 +1,5 @@
-data/
+data/*
 word2vec.model
 .idea/
+!data/plots/
+.DS_Store
