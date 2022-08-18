@@ -13,4 +13,4 @@ Our focus is on heusler compounds, therefore, we provide some visualizations to 
 materials in space. 
 
 ## Related Work
-* [1]Tshitoyan, V., Dagdelen, J., Weston, L. et al. Unsupervised word embeddings capture latent knowledge from materials science literature. Nature 571, 95–98 (2019). https://doi.org/10.1038/s41586-019-1335-8
+* [1] Tshitoyan, V., Dagdelen, J., Weston, L. et al. Unsupervised word embeddings capture latent knowledge from materials science literature. Nature 571, 95–98 (2019). https://doi.org/10.1038/s41586-019-1335-8
