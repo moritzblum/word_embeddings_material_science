@@ -3,3 +3,4 @@ word2vec.model
 .idea/
 !data/plots/
 .DS_Store
+!data/heusler.csv

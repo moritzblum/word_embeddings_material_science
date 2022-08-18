@@ -22,6 +22,8 @@ from sklearn.manifold import TSNE
 
 
 
+
+
 ms_model = Word2Vec.load('./data/material2vec/pretrained_embeddings')
 vocab = [x for x in ms_model.wv.key_to_index]
 
@@ -37,8 +39,9 @@ heusler_df = heusler_df[heusler_df['heusler'] != 'sums-up-to-100']
 heusler_df = heusler_df[heusler_df['compound'].isin(vocab)]
 
 cmap = 'RdYlGn_r'
+
+
 # --- vis price ---
-"""
 colormap = matplotlib.cm.get_cmap(name=cmap)
 
 heusler_price_df = heusler_df[heusler_df['price'] != 'unknown'].copy()
@@ -74,11 +77,9 @@ for i, word in enumerate(heusler_price_df['compound']):
 
 plt.savefig("./data/heusler_price_with_labels.svg")
 plt.show()
-"""
 
 
 # --- vis weight ---
-"""
 heusler_weight_df = heusler_df[heusler_df['weight'] != 0].copy()
 
 
@@ -112,10 +113,9 @@ for i, word in enumerate(heusler_weight_df['compound']):
 
 plt.savefig("./data/heusler_weight_with_labels.svg")
 plt.show()
-"""
+
 
 # --- vis element typs ---
-"""
 elements_df = pd.read_csv('data/elements.csv').fillna('unknown')
 elements_df = elements_df[elements_df['Symbol'].isin(list(ms_model.wv.key_to_index))]
 
@@ -146,11 +146,9 @@ plt.legend(handles=legend_elements, loc='upper right', title="Types")
 plt.savefig("./data/element_types.svg")
 
 pyplot.show()
-"""
 
 
 # --- vis groups ---
-"""
 colormap = matplotlib.cm.get_cmap(name='tab10')
 
 heusler_groups_df = heusler_df[heusler_df['groups'] != 'unknown'].copy()
@@ -189,8 +187,6 @@ plt.legend(handles=legend_elements, loc='upper right', title="Types")
 plt.savefig("./data/heusler_groups.svg")
 
 plt.show()
-"""
-
 
 
 # --- vis heusler types ---
@@ -232,17 +228,3 @@ for i, word in enumerate(materials):
 plt.savefig("./data/heusler_types_with_labels.svg")
 
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
